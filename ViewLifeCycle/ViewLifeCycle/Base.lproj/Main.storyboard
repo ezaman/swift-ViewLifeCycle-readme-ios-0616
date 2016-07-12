@@ -1,56 +1,96 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ViewLifeCycle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rHy-tK-Kss"/>
+                        <viewControllerLayoutGuide type="bottom" id="4O2-sE-ei8"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" id="5gq-UR-nUT">
-                                <rect key="frame" x="20" y="86" width="280" height="159"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gq-UR-nUT">
+                                <rect key="frame" x="20" y="81" width="280" height="159"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="159" id="xXG-gw-3O7"/>
+                                </constraints>
                                 <string key="text">After the film gained popularity, Ted Turner sold the television rights to TNT, his own network, for much lower than normal for such a big film. Because it is so inexpensive to show, the film is broadcast on TNT extremely often.</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="5HL-n5-KDg"/>
+                                </connections>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Film Trivia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YmV-6U-G5l">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Film Trivia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YmV-6U-G5l">
                                 <rect key="frame" x="88" y="20" width="145" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" red="0.94509803920000002" green="0.61176470589999998" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pny-8R-dX9">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pny-8R-dX9">
                                 <rect key="frame" x="44" y="263" width="99" height="143"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="143" id="OAw-Re-RjU"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="ShawshankRedemption"/>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="T5z-i3-he1">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5z-i3-he1">
                                 <rect key="frame" x="44" y="414" width="99" height="143"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="ToyStory"/>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Mn0-K8-Eof">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mn0-K8-Eof">
                                 <rect key="frame" x="170" y="263" width="99" height="143"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Titanic"/>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vei-uF-l96">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vei-uF-l96">
                                 <rect key="frame" x="170" y="414" width="99" height="143"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="TrumanShow"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4O2-sE-ei8" firstAttribute="top" secondItem="T5z-i3-he1" secondAttribute="bottom" constant="11" id="0Ou-wh-rVF"/>
+                            <constraint firstItem="vei-uF-l96" firstAttribute="firstBaseline" secondItem="T5z-i3-he1" secondAttribute="firstBaseline" id="3LX-lY-aNg"/>
+                            <constraint firstItem="5gq-UR-nUT" firstAttribute="top" secondItem="YmV-6U-G5l" secondAttribute="bottom" constant="28" id="4Yq-uD-Gek"/>
+                            <constraint firstItem="5gq-UR-nUT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4iL-GL-p9w"/>
+                            <constraint firstItem="Pny-8R-dX9" firstAttribute="firstBaseline" secondItem="Mn0-K8-Eof" secondAttribute="firstBaseline" id="52e-hO-9ig"/>
+                            <constraint firstItem="Pny-8R-dX9" firstAttribute="baseline" secondItem="Mn0-K8-Eof" secondAttribute="baseline" id="5aR-Ww-u5Q"/>
+                            <constraint firstItem="Pny-8R-dX9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="28" id="AKG-4P-g5E"/>
+                            <constraint firstItem="Pny-8R-dX9" firstAttribute="firstBaseline" secondItem="Mn0-K8-Eof" secondAttribute="firstBaseline" id="DHL-pb-hDF"/>
+                            <constraint firstItem="T5z-i3-he1" firstAttribute="top" secondItem="Pny-8R-dX9" secondAttribute="bottom" constant="8" id="Ed4-ZL-VXD"/>
+                            <constraint firstItem="T5z-i3-he1" firstAttribute="baseline" secondItem="vei-uF-l96" secondAttribute="baseline" id="GG2-RB-eP6"/>
+                            <constraint firstItem="Mn0-K8-Eof" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="K0O-Oq-5gP"/>
+                            <constraint firstItem="5gq-UR-nUT" firstAttribute="centerX" secondItem="YmV-6U-G5l" secondAttribute="centerX" id="PPJ-7D-wkC"/>
+                            <constraint firstItem="Pny-8R-dX9" firstAttribute="top" secondItem="Mn0-K8-Eof" secondAttribute="top" id="Pf0-4T-C41"/>
+                            <constraint firstItem="vei-uF-l96" firstAttribute="leading" secondItem="Mn0-K8-Eof" secondAttribute="leading" id="PlP-vy-F5W"/>
+                            <constraint firstItem="Pny-8R-dX9" firstAttribute="baseline" secondItem="Mn0-K8-Eof" secondAttribute="baseline" id="RQR-te-Oyh"/>
+                            <constraint firstItem="Pny-8R-dX9" firstAttribute="bottom" secondItem="Mn0-K8-Eof" secondAttribute="bottom" id="T1y-l8-uHg"/>
+                            <constraint firstItem="vei-uF-l96" firstAttribute="top" secondItem="T5z-i3-he1" secondAttribute="top" id="V7O-3p-Vfu"/>
+                            <constraint firstItem="Pny-8R-dX9" firstAttribute="leading" secondItem="T5z-i3-he1" secondAttribute="leading" id="WI8-TE-lS6"/>
+                            <constraint firstItem="vei-uF-l96" firstAttribute="trailing" secondItem="Mn0-K8-Eof" secondAttribute="trailing" id="ajm-j3-DXy"/>
+                            <constraint firstItem="vei-uF-l96" firstAttribute="baseline" secondItem="T5z-i3-he1" secondAttribute="baseline" id="cyx-Gp-2mN"/>
+                            <constraint firstItem="Mn0-K8-Eof" firstAttribute="leading" secondItem="Pny-8R-dX9" secondAttribute="trailing" constant="27" id="gDZ-Ms-QQS"/>
+                            <constraint firstItem="YmV-6U-G5l" firstAttribute="top" secondItem="rHy-tK-Kss" secondAttribute="bottom" id="gwX-8h-iAK"/>
+                            <constraint firstItem="Pny-8R-dX9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="263" id="l1V-Fl-ZTR"/>
+                            <constraint firstItem="T5z-i3-he1" firstAttribute="firstBaseline" secondItem="vei-uF-l96" secondAttribute="firstBaseline" id="lAw-IK-Xfc"/>
+                            <constraint firstItem="YmV-6U-G5l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="72" id="mau-mF-4vG"/>
+                            <constraint firstItem="Pny-8R-dX9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="prj-2H-NHc"/>
+                            <constraint firstItem="5gq-UR-nUT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="qgh-6W-7Fz"/>
+                            <constraint firstItem="4O2-sE-ei8" firstAttribute="top" secondItem="vei-uF-l96" secondAttribute="bottom" constant="11" id="rQt-jy-0FV"/>
+                            <constraint firstItem="T5z-i3-he1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="vhL-zn-y0Y"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
